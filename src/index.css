@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-zinc-900 font-sans antialiased overflow-x-hidden;
+  }
+  
+  ::selection {
+    @apply bg-zinc-900 text-white;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+/* Scrolling animation for the submissions panel */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 30s linear infinite;
+}
+
+.animate-scroll-up:hover {
+  animation-play-state: paused;
+}
