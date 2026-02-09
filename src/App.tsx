@@ -29,7 +29,7 @@ function App() {
           <img 
             src="/images/quinty-logo.png" 
             alt="Quinty Logo" 
-            className="w-9 h-9 rounded-sm filter grayscale brightness-0"
+            className="w-9 h-9 filter grayscale brightness-0"
           />
           <span className="text-xl font-bold font-heading tracking-tight">Quinty</span>
         </div>
@@ -46,9 +46,9 @@ function App() {
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-zinc-200 rounded-full shadow-sm mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-zinc-200 shadow-sm mb-8"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 bg-[#0EA885]" />
               <span className="text-xs font-semibold uppercase tracking-wide text-zinc-600">Base Batches 002</span>
             </motion.div>
 
@@ -60,7 +60,7 @@ function App() {
               className="text-6xl md:text-8xl font-bold font-heading tracking-tighter text-zinc-900 mb-6 leading-[0.9]"
             >
               Trust shouldn't <br />
-              <span className="text-zinc-400">be optional.</span>
+              be <span className="text-[#0EA885]">optional.</span>
             </motion.h1>
 
             {/* Value Props */}
@@ -71,15 +71,15 @@ function App() {
               className="flex flex-col gap-4 mb-10 max-w-lg"
             >
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-400 mt-1.5 pt-0.5 border-t border-zinc-200">01</span>
+                <span className="font-mono text-xs text-[#0EA885] mt-1.5 pt-0.5 border-t border-[#0EA885]/30">01</span>
                 <p className="text-lg text-zinc-600 font-normal">Requester lock rewards in smart contract before work begins.</p>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-400 mt-1.5 pt-0.5 border-t border-zinc-200">02</span>
+                <span className="font-mono text-xs text-[#0EA885] mt-1.5 pt-0.5 border-t border-[#0EA885]/30">02</span>
                 <p className="text-lg text-zinc-600 font-normal">Solvers submit work with their x account account.</p>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-400 mt-1.5 pt-0.5 border-t border-zinc-200">03</span>
+                <span className="font-mono text-xs text-[#0EA885] mt-1.5 pt-0.5 border-t border-[#0EA885]/30">03</span>
                 <p className="text-lg text-zinc-600 font-normal">Earn your on-chain job reputation.</p>
               </div>
             </motion.div>
@@ -95,7 +95,7 @@ function App() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="https://app.quinty.io"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 bg-zinc-900 hover:bg-black text-white hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-sm transition-all duration-200 bg-zinc-900 hover:bg-black text-white hover:shadow-lg hover:-translate-y-0.5"
               >
                 <span>Launch App</span>
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -105,7 +105,7 @@ function App() {
               
               <button
                 onClick={() => setShowVideo(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 bg-white border border-zinc-200 hover:bg-zinc-50 text-zinc-600 hover:shadow-md hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-sm transition-all duration-200 bg-white border border-zinc-200 hover:bg-zinc-50 text-zinc-600 hover:shadow-md hover:-translate-y-0.5"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
@@ -115,7 +115,7 @@ function App() {
             </div>
             
             <p className="mt-4 text-[10px] text-zinc-500">
-              Trust and transparency come standard. <a href="https://docs.quinty.io" className="text-zinc-900 font-medium hover:underline underline-offset-4 ml-1">Read the docs →</a>
+              Trust and transparency come standard with smart contract. <a href="https://docs.quinty.io" className="text-[#0EA885] font-medium hover:underline underline-offset-4 ml-1">Read the docs →</a>
             </p>
           </motion.div>
         </div>
@@ -125,17 +125,17 @@ function App() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full h-full min-h-[500px] bg-white border border-zinc-200 rounded-xl shadow-2xl shadow-zinc-200/40 overflow-hidden flex flex-col"
+          className="relative w-full h-full min-h-[500px] bg-white border border-zinc-200 shadow-2xl shadow-zinc-200/40 overflow-hidden flex flex-col border-t-2 border-t-[#0EA885]"
         >
           {/* Panel Header */}
           <div className="px-6 py-4 border-b border-zinc-100 flex justify-between items-center bg-zinc-50/50 backdrop-blur-sm">
             <div className="flex items-center gap-2 font-mono text-[10px] text-zinc-500">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 bg-[#0EA885] animate-pulse" />
               Active Activities
             </div>
             <div className="flex gap-1.5 opacity-20">
-              <div className="w-2 h-2 rounded-full bg-zinc-900" />
-              <div className="w-2 h-2 rounded-full bg-zinc-900" />
+              <div className="w-2 h-2 bg-zinc-900" />
+              <div className="w-2 h-2 bg-zinc-900" />
             </div>
           </div>
 
@@ -160,14 +160,14 @@ function App() {
                   {submissions.map((item, index) => (
                     <div 
                       key={`first-${index}`}
-                      className="grid grid-cols-12 items-center px-4 py-3 rounded-md hover:bg-zinc-50 transition-colors cursor-default group"
+                      className="grid grid-cols-12 items-center px-4 py-3 hover:bg-zinc-50 transition-colors cursor-default group"
                     >
                       <div className="col-span-4 flex flex-col">
                         <span className="font-semibold text-xs text-zinc-900">{item.topic}</span>
                         <span className="text-[10px] text-zinc-500">{item.role}</span>
                       </div>
                       <div className="col-span-5">
-                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200">
+                        <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200">
                           {item.prize}
                         </span>
                       </div>
@@ -182,14 +182,14 @@ function App() {
                   {submissions.map((item, index) => (
                     <div 
                       key={`second-${index}`}
-                      className="grid grid-cols-12 items-center px-4 py-3 rounded-md hover:bg-zinc-50 transition-colors cursor-default group"
+                      className="grid grid-cols-12 items-center px-4 py-3 hover:bg-zinc-50 transition-colors cursor-default group"
                     >
                       <div className="col-span-4 flex flex-col">
                         <span className="font-semibold text-xs text-zinc-900">{item.topic}</span>
                         <span className="text-[10px] text-zinc-500">{item.role}</span>
                       </div>
                       <div className="col-span-5">
-                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200">
+                        <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200">
                           {item.prize}
                         </span>
                       </div>
@@ -208,7 +208,7 @@ function App() {
       {/* Footer */}
       <footer className="w-full absolute bottom-0 left-0 border-t border-zinc-200 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          <p className="text-zinc-400 text-xs">
+          <p className="text-[#0EA885] text-xs font-medium">
             © {new Date().getFullYear()} Quinty Labs.
           </p>
         </div>
@@ -229,11 +229,11 @@ function App() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl aspect-video bg-zinc-900 rounded-2xl shadow-2xl overflow-hidden border border-zinc-800"
+              className="relative w-full max-w-4xl aspect-video bg-zinc-900 shadow-2xl overflow-hidden border border-zinc-800"
             >
               <button 
                 onClick={() => setShowVideo(false)}
-                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors"
+                className="absolute top-4 right-4 z-10 p-2 bg-black/20 hover:bg-black/40 text-white transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 6L6 18M6 6l12 12" />
