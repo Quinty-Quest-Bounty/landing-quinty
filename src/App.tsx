@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Agentation } from 'agentation';
 
 // Sample bounty/task submissions data
 const submissions = [
@@ -251,6 +252,9 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Agentation - only in development */}
+      {import.meta.env.DEV && <Agentation endpoint="http://localhost:4747" />}
     </div>
   );
 }
