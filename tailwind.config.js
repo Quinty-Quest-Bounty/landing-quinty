@@ -8,13 +8,20 @@ export default {
     extend: {
       colors: {
         bg: {
-          primary: '#0a0a0a',
-          secondary: '#111111',
+          primary: '#060606',
+          secondary: '#0e0e0e',
+          card: '#0a0a0a',
         },
         accent: {
           DEFAULT: '#0EA885',
-          bright: '#10D4A0',
-          glow: 'rgba(14,168,133,0.15)',
+          bright: '#14E3B0',
+          dim: '#0A7A60',
+          glow: 'rgba(14, 168, 133, 0.15)',
+        },
+        surface: {
+          DEFAULT: 'rgba(255, 255, 255, 0.03)',
+          hover: 'rgba(255, 255, 255, 0.06)',
+          border: 'rgba(255, 255, 255, 0.06)',
         },
       },
       fontFamily: {
@@ -22,8 +29,10 @@ export default {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
-      borderRadius: {
-        glass: '16px',
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'drift': 'drift 20s ease-in-out infinite',
       },
     },
   },

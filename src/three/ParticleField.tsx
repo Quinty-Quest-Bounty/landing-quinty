@@ -7,23 +7,29 @@ interface ParticleFieldProps {
   speed?: number
 }
 
-export function ParticleField({ count = 200, speed = 0.015 }: ParticleFieldProps) {
+export function ParticleField({ count = 600, speed = 0.008 }: ParticleFieldProps) {
   const pointsRef = useRef<THREE.Points>(null!)
 
-  const positions = useMemo(() => {
+  const { positions, sizes } = useMemo(() => {
     const pos = new Float32Array(count * 3)
+    const sz = new Float32Array(count)
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 16
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 16
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 6
+      // Wider spread for dense background coverage
+      pos[i * 3] = (Math.random() - 0.5) * 20
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 20
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 10
+      // Varied sizes — some larger "star" particles
+      sz[i] = Math.random() < 0.1 ? 0.06 + Math.random() * 0.04 : 0.015 + Math.random() * 0.02
     }
-    return pos
+    return { positions: pos, sizes: sz }
   }, [count])
 
-  useFrame((_, delta) => {
+  useFrame((state, delta) => {
     if (!pointsRef.current) return
-    pointsRef.current.rotation.y += delta * speed * 0.5
-    pointsRef.current.rotation.x += delta * speed * 0.2
+    pointsRef.current.rotation.y += delta * speed
+    pointsRef.current.rotation.x += delta * speed * 0.3
+    // Gentle float
+    pointsRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.2) * 0.15
   })
 
   return (
@@ -33,12 +39,16 @@ export function ParticleField({ count = 200, speed = 0.015 }: ParticleFieldProps
           attach="attributes-position"
           args={[positions, 3]}
         />
+        <bufferAttribute
+          attach="attributes-size"
+          args={[sizes, 1]}
+        />
       </bufferGeometry>
       <pointsMaterial
-        size={0.02}
+        size={0.035}
         color="#0EA885"
         transparent
-        opacity={0.5}
+        opacity={0.65}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}

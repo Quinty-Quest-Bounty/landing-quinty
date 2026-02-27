@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
 import { FeatureBento } from './components/FeatureBento'
+import { HowItWorks } from './components/HowItWorks'
 import { FinalCTA } from './components/FinalCTA'
 import { Footer } from './components/Footer'
 
@@ -10,6 +11,7 @@ export default function App() {
       <Navbar />
       <HeroSection />
       <FeatureBento />
+      <HowItWorks />
       <FinalCTA />
       <Footer />
     </div>
