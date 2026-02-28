@@ -8,26 +8,28 @@ export default {
     extend: {
       colors: {
         bg: {
-          primary: '#060606',
-          secondary: '#0e0e0e',
-          card: '#0a0a0a',
+          primary: '#0e0e0e',
+          secondary: '#141414',
+          card: '#171717',
+          elevated: '#1c1c1c',
         },
         accent: {
-          DEFAULT: '#0EA885',
-          bright: '#14E3B0',
-          dim: '#0A7A60',
-          glow: 'rgba(14, 168, 133, 0.15)',
+          DEFAULT: '#5cb8b2',
+          bright: '#7dd4cc',
+          dim: '#4a9e98',
+          muted: '#4d9994',
+          glow: 'rgba(92, 184, 178, 0.15)',
         },
         surface: {
-          DEFAULT: 'rgba(255, 255, 255, 0.03)',
-          hover: 'rgba(255, 255, 255, 0.06)',
-          border: 'rgba(255, 255, 255, 0.06)',
+          DEFAULT: 'rgba(255, 255, 255, 0.04)',
+          hover: 'rgba(255, 255, 255, 0.07)',
+          border: 'rgba(255, 255, 255, 0.08)',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['"JetBrains Mono"', 'monospace'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

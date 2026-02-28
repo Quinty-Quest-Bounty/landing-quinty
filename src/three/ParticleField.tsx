@@ -46,9 +46,9 @@ export function ParticleField({ count = 600, speed = 0.008 }: ParticleFieldProps
       </bufferGeometry>
       <pointsMaterial
         size={0.035}
-        color="#0EA885"
+        color="#5cb8b2"
         transparent
-        opacity={0.65}
+        opacity={0.45}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}
