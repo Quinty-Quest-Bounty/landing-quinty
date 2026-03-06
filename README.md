@@ -1,26 +1,18 @@
-# Quinty Landing Page
+# landing-quinty
 
-This is the lightweight, production-grade landing page for Quinty.
+Marketing landing page for the Quinty platform. Dark editorial design with GSAP animations and a Three.js particle background.
 
-## Tech Stack
-- Vite
-- React
-- TypeScript
-- Framer Motion
-- Lucide React
-- Vanilla CSS (Modern Design System)
+**Tech stack:** Vite, React 19, TypeScript, Tailwind CSS, GSAP, Three.js (React Three Fiber)
 
-## Development
+## Quick Start
+
 ```bash
 pnpm install
-pnpm run dev
+pnpm dev
 ```
 
-## Deployment
-The landing page should be deployed to `quinty.io`.
-The "Launch App" button points to `https://app.quinty.io`.
+Runs on `http://localhost:5173`.
 
-## Structure
-- `src/App.tsx`: Main landing page content.
-- `src/index.css`: Modern design system and styles.
-- `public/images/`: Assets and branding.
+## Full Documentation
+
+[docs.quinty.io](https://docs.quinty.io)
