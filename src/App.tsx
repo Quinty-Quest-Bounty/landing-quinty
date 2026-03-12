@@ -115,7 +115,7 @@ function App() {
             </div>
             
             <p className="mt-4 text-[10px] text-zinc-500">
-              Trust and transparency come standard with smart contract. <a href="https://docs.quinty.io" className="text-[#0EA885] font-medium hover:underline underline-offset-4 ml-1">Read the docs →</a>
+              Trust and transparency come standard with smart contract. <a href="https://quintylabs.mintlify.app/" className="text-[#0EA885] font-medium hover:underline underline-offset-4 ml-1">Read the docs →</a>
             </p>
           </motion.div>
         </div>
