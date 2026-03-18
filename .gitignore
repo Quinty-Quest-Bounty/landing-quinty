@@ -80,3 +80,13 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+
+# Pencil files
+*.pen
+
+# MCP config
+.mcp.json
+
+# Plans and brainstorms
+docs/brainstorms/
+docs/plans/
